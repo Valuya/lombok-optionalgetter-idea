@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [1.0.3]
+
+### Fixed
+
+- Find Usages on an `@OptionalGetter` field now reliably includes the generated getter's call sites: the
+  handler delegates to the real Java field search and only *appends* the generated getter, and no longer
+  depends on the getter being resolvable at handler-selection time (which could make it silently fall back
+  to the default handler).
+
 ## [1.0.2]
 
 ### Fixed
