@@ -22,5 +22,8 @@
     <extensions defaultExtensionNs="com.intellij">
         <lang.psiAugmentProvider
             implementation="be.valuya.lombok.optionalgetter.idea.OptionalGetterAugmentProvider"/>
+        <!-- order=first so it claims @OptionalGetter fields before the default Java factory. -->
+        <findUsagesHandlerFactory order="first"
+            implementation="be.valuya.lombok.optionalgetter.idea.OptionalGetterFindUsagesHandlerFactory"/>
     </extensions>
 </idea-plugin>
