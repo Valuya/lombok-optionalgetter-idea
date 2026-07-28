@@ -1,6 +1,9 @@
+import org.jetbrains.changelog.Changelog
+
 plugins {
     kotlin("jvm") version "2.0.21"
     id("org.jetbrains.intellij.platform") version "2.1.0"
+    id("org.jetbrains.changelog") version "2.2.1"
 }
 
 group = "be.valuya"
@@ -32,6 +35,17 @@ intellijPlatform {
             sinceBuild = "242"
             untilBuild = provider { null }   // no upper bound — works in current and future IntelliJ
         }
+        // Marketplace "What's new" for this version, taken from CHANGELOG.md.
+        changeNotes = provider {
+            with(changelog) {
+                renderItem(
+                    (getOrNull(project.version.toString()) ?: getUnreleased())
+                        .withHeader(false)
+                        .withEmptySections(false),
+                    Changelog.OutputType.HTML,
+                )
+            }
+        }
     }
 
     // JetBrains Marketplace publishing (used by publish-plugin.yml). Needs a PUBLISH_TOKEN.
@@ -42,4 +56,9 @@ intellijPlatform {
 
 kotlin {
     jvmToolchain(21)
+}
+
+changelog {
+    version = project.version.toString()
+    // CHANGELOG.md, keep-a-changelog format; the [Unreleased] section rolls into the next release.
 }
