@@ -33,6 +33,11 @@ intellijPlatform {
             untilBuild = provider { null }   // no upper bound — works in current and future IntelliJ
         }
     }
+
+    // JetBrains Marketplace publishing (used by publish-plugin.yml). Needs a PUBLISH_TOKEN.
+    publishing {
+        token = providers.environmentVariable("PUBLISH_TOKEN")
+    }
 }
 
 kotlin {
