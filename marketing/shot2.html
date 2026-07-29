@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1600px; height:1000px; background:#1e1f22; font-family:'Segoe UI',Roboto,Arial,sans-serif; color:#dfe1e5; display:flex; flex-direction:column; }
+  .head { padding:52px 64px 8px; }
+  .title { font-size:46px; font-weight:700; color:#fff; }
+  .sub { font-size:24px; color:#9aa0a6; margin-top:10px; }
+  .rows { flex:1; display:flex; flex-direction:column; justify-content:center; gap:26px; padding:0 64px; }
+  .row { display:flex; align-items:center; gap:30px; background:#2b2d30; border:1px solid #393b40; border-radius:14px; padding:26px 32px; }
+  .ic { width:74px;height:74px;flex:none;border-radius:14px;background:#1f3a5f;color:#7aa2f7;display:flex;align-items:center;justify-content:center;font-size:38px; }
+  .rt .h { font-size:28px; font-weight:600; color:#fff; }
+  .rt .d { font-size:23px; color:#b9bcc2; margin-top:6px; }
+  code { font-family:'JetBrains Mono',Consolas,monospace; color:#b3ae60; background:#111214; padding:2px 8px; border-radius:6px; font-size:21px; }
+  .foot { padding:14px 64px 46px; font-size:23px; color:#9aa0a6; }
+</style></head><body>
+  <div class="head">
+    <div class="title">OptionalGetter for Lombok</div>
+    <div class="sub">What it restores in the editor for <span style="color:#b3ae60">@OptionalGetter</span>-generated accessors</div>
+  </div>
+  <div class="rows">
+    <div class="row"><div class="ic">&#9998;</div><div class="rt"><div class="h">Code completion</div><div class="d"><code>getEmailOptional()</code> is suggested on any field annotated <code>@OptionalGetter</code>.</div></div></div>
+    <div class="row"><div class="ic">&#128269;</div><div class="rt"><div class="h">Find Usages</div><div class="d">Find Usages on the field also finds the generated getter's call sites, not just direct field references.</div></div></div>
+    <div class="row"><div class="ic">&#8618;</div><div class="rt"><div class="h">Go to declaration</div><div class="d">Ctrl-click / Ctrl-B on a <code>getXxxOptional()</code> call jumps to the annotated field.</div></div></div>
+  </div>
+  <div class="foot">Runs alongside the bundled Lombok plugin. Pairs with the io.github.valuya:lombok overlay (Maven Central).</div>
+</body></html>

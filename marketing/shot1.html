@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1600px; height:1000px; background:#1e1f22; font-family:'Segoe UI',Roboto,Arial,sans-serif; color:#dfe1e5; display:flex; flex-direction:column; }
+  .head { padding:48px 60px 20px; }
+  .title { font-size:46px; font-weight:700; color:#fff; }
+  .sub { font-size:24px; color:#9aa0a6; margin-top:10px; }
+  .body { flex:1; display:flex; align-items:center; justify-content:center; gap:44px; padding:0 50px; }
+  .card { background:#2b2d30; border:1px solid #393b40; border-radius:14px; overflow:hidden; width:672px; box-shadow:0 10px 40px rgba(0,0,0,.35); }
+  .card h3 { font-size:19px; color:#9aa0a6; font-weight:600; padding:16px 24px; border-bottom:1px solid #393b40; background:#26282b; }
+  pre { font-family:'JetBrains Mono','Fira Code',Consolas,monospace; font-size:21px; line-height:1.72; padding:26px 28px; white-space:pre; }
+  .kw{color:#cf8e6d} .an{color:#b3ae60} .ty{color:#8fbcbb} .st{color:#6aab73} .cm{color:#7a7e85} .mn{color:#56a8f5} .pl{color:#c1c2c4}
+  .arrow { font-size:58px; color:#3574f0; }
+  .foot { padding:22px 60px 44px; font-size:26px; color:#c9cbd1; }
+  .foot b{color:#fff}
+  .pill{display:inline-block;background:#1f3a5f;color:#7aa2f7;border-radius:999px;padding:5px 18px;font-size:20px;margin-right:12px}
+</style></head><body>
+  <div class="head">
+    <div class="title">OptionalGetter for Lombok</div>
+    <div class="sub">Editor support for <span style="color:#b3ae60">@OptionalGetter</span> (from the io.github.valuya:lombok overlay)</div>
+  </div>
+  <div class="body">
+    <div class="card">
+      <h3>You write</h3>
+<pre><span class="kw">public class</span> <span class="ty">Customer</span> <span class="pl">{</span>
+
+    <span class="an">@OptionalGetter</span>
+    <span class="kw">private</span> <span class="ty">String</span> <span class="pl">email;</span>
+
+<span class="pl">}</span></pre>
+    </div>
+    <div class="arrow">&#10142;</div>
+    <div class="card">
+      <h3>The editor resolves</h3>
+<pre><span class="cm">// generated, now known to the IDE</span>
+<span class="kw">public</span> <span class="ty">Optional</span><span class="pl">&lt;</span><span class="ty">String</span><span class="pl">&gt;</span> <span class="mn">getEmailOptional</span><span class="pl">() {</span>
+    <span class="kw">return</span> <span class="ty">Optional</span><span class="pl">.</span><span class="mn">ofNullable</span><span class="pl">(email);</span>
+<span class="pl">}</span></pre>
+    </div>
+  </div>
+  <div class="foot"><span class="pill">Code completion</span><span class="pill">Find Usages</span><span class="pill">Go to declaration</span> &nbsp; no more <b>unresolved</b> red on the generated getters.</div>
+</body></html>
