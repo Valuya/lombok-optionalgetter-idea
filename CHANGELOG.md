@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.0.4]
+
+### Changed
+
+- Quiet the find-usages diagnostics to debug level (no default log noise); the fix from 1.0.3 is unchanged.
+
 ## [1.0.3]
 
 ### Fixed
