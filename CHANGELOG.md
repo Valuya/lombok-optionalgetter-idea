@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [1.0.5]
+
+### Changed
+
+- Renamed the plugin to **OptionalGetter for Lombok** (JetBrains Marketplace does not allow `@` in a plugin
+  name). Functionality is unchanged.
+
 ## [1.0.4]
 
 ### Changed

@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>be.valuya.lombok.optionalgetter</id>
-    <name>Lombok @OptionalGetter</name>
+    <name>OptionalGetter for Lombok</name>
     <vendor url="https://www.valuya.be">Valuya SRL</vendor>
 
     <description><![CDATA[
