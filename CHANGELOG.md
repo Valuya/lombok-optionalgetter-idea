@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+## [1.0.6]
+
+### Changed
+
+- Point the description and listing graphics at the overlay's new coordinates,
+  `io.github.valuya:lombok-optionalgetter-overlay` (renamed from `io.github.valuya:lombok` at the request of
+  the Project Lombok maintainers). No functional change: the plugin keys on the `lombok.OptionalGetter`
+  annotation, whose fully qualified name did not change, so it works with either artifact.
+
+
+
 ## [1.0.5]
 
 ### Changed

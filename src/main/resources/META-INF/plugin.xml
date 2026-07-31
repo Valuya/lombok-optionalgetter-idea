@@ -5,7 +5,7 @@
 
     <description><![CDATA[
         Editor support for <code>@OptionalGetter</code> from the
-        <a href="https://github.com/Valuya/lombok-optionalgetter">io.github.valuya:lombok</a> overlay
+        <a href="https://github.com/Valuya/lombok-optionalgetter">io.github.valuya:lombok-optionalgetter-overlay</a> overlay
         (a Project Lombok overlay whose <code>@OptionalGetter</code> generates a
         <code>getXxxOptional()</code> accessor returning <code>Optional&lt;T&gt;</code>).
         <br/><br/>

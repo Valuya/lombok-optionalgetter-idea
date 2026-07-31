@@ -1,7 +1,7 @@
 # lombok-optionalgetter-idea
 
 IntelliJ IDEA editor support for **`@OptionalGetter`** from the
-[`io.github.valuya:lombok`](https://github.com/Valuya/lombok-optionalgetter) overlay.
+[`io.github.valuya:lombok-optionalgetter-overlay`](https://github.com/Valuya/lombok-optionalgetter) overlay.
 
 `@OptionalGetter` generates a `getXxxOptional()` accessor returning `Optional<T>`. IntelliJ's bundled Lombok
 plugin only knows Lombok's *built-in* annotations, so those generated methods otherwise show up as
