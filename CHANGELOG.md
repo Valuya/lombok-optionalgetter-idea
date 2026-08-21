@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+## [1.0.7]
+
+### Fixed
+
+- An `@OptionalGetter` field is no longer reported as *"Private field is assigned but never accessed"*: an
+  `ImplicitUsageProvider` now marks the field as read by its generated `getXxxOptional()` accessor, matching
+  how the bundled Lombok plugin treats `@Getter` fields. Find Usages already found the accessor's call sites;
+  this brings the unused-field inspection in line with that.
+
 ## [1.0.6]
 
 ### Changed
