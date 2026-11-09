@@ -2,6 +2,18 @@
 
 ## [Unreleased]
 
+## [1.0.8]
+
+### Fixed
+
+- Every Lombok member, not only `getXxxOptional()`, is resolved again in IntelliJ 2026.2. Its bundled Lombok
+  plugin recognises a project as a Lombok project by the Maven coordinate `org.projectlombok:lombok`; the
+  overlay's `io.github.valuya:lombok-optionalgetter-overlay` does not match, so that plugin turned itself off
+  and `@Getter`, `@Builder` and the rest went red (*"must implement abstract method 'getId()'"*). On project
+  open, this plugin now turns on the bundled plugin's own fallback detection, the registry key
+  `lombok.slow.jar.detection.enabled`, which finds any library holding the `lombok` package. The bundled
+  plugin still generates every built-in Lombok member itself; this plugin adds only `getXxxOptional()`.
+
 ## [1.0.7]
 
 ### Fixed
