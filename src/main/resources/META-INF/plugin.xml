@@ -18,6 +18,8 @@
 
     <!-- Java PSI; runs alongside (does not depend on) the bundled Lombok plugin. -->
     <depends>com.intellij.modules.java</depends>
+    <!-- With the bundled Lombok plugin present, switch on its detection of the overlay jar. -->
+    <depends optional="true" config-file="optionalgetter-with-lombok.xml">Lombook Plugin</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <lang.psiAugmentProvider
